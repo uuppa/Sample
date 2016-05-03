@@ -8,7 +8,7 @@
     
     <property name="lib.dir"     value="lib"/>
 
-    <property name="main-class"  value="com.junit.test.Calcultor "/>
+    <property name="main-class"  value="com.junit.test.Calculator"/>
 
     <path id="classpath">
         <fileset dir="${lib.dir}" includes="**/*.jar"/>
