@@ -1,6 +1,12 @@
 package com.junit.test;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.BasicConfigurator;
+
 public class Calculator {
+	
+	static Logger logger = Logger.getLogger(Calculator.class);
+	
 	  public int evaluate(String expression) {
 	    int sum = 0;
 	    for (String summand: expression.split("\\+"))
@@ -9,6 +15,7 @@ public class Calculator {
 	  }
 	  
 	  public static void main(String args[]){
-		  System.out.println("In Main");
+		BasicConfigurator.configure();
+        	logger.info("****Executing Calculator****"); 
 	  }
 	}
