@@ -7,12 +7,13 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class CalculatorTest {
+  static Logger logger = Logger.getLogger(CalculatorTest.class);
   @Test
   public void evaluatesExpression() {
     BasicConfigurator.configure();
     Calculator calculator = new Calculator();
     int sum = calculator.evaluate("1+2+3");
     assertEquals(6, sum);
-    Logger.info("CalculatorTest"); 
+    logger.info("****Executing CalculatorTest****"); 
   }
 }
