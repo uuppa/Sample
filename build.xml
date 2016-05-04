@@ -63,8 +63,8 @@
         <junitreport todir="${report.dir}">
             <fileset dir="${report.dir}" includes="TEST-*.xml"/>
             <report todir="${report.dir}"/>
-    </junitreport>
-
+	</junitreport>
+    </target>
     <target name="clean-build" depends="clean,jar"/>
 
     <target name="main" depends="clean,run,junit"/>
