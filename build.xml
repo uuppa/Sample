@@ -1,14 +1,11 @@
 <project name="Calculator" basedir="." default="main">
 
     <property name="src.dir"     value="src"/>
-
     <property name="build.dir"   value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="${build.dir}/jar"/>
     <property name="main-class"  value="com.junit.test.Calculator"/>
-    
     <property name="lib.dir"     value="lib"/>
-
     <property name="report.dir"  value="${build.dir}/junitreport"/>
 
     <path id="classpath">
@@ -35,7 +32,9 @@
             </manifest>
         </jar>
     </target>
+
 <path id="application" location="${jar.dir}/${ant.project.name}.jar"/>
+
     <target name="run" depends="jar">
         <java classname="${main-class}" fork="true">
                 <classpath>
@@ -52,14 +51,13 @@
                 <path refid="classpath"/>
                 <path refid="application"/>
             </classpath>
-           
             <formatter type="xml"/>
-            
             <batchtest fork="yes" todir="${report.dir}">
-                <fileset dir="${src.dir}" includes="CalculatorTest.java"/>
+                <fileset dir="${src.dir}" includes="*Test.java"/>
             </batchtest>
         </junit>
     </target>
+    
     <target name="junitreport">
         <junitreport todir="${report.dir}">
             <fileset dir="${report.dir}" includes="TEST-*.xml"/>
