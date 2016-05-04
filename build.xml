@@ -2,10 +2,11 @@
 
     <property name="src.dir"     value="src"/>
     <property name="build.dir"   value="build"/>
+    <property name="lib.dir"     value="lib"/>
+    <property name="test.dir"    value="test"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir"     value="${build.dir}/jar"/>
     <property name="main-class"  value="com.junit.test.Calculator"/>
-    <property name="lib.dir"     value="lib"/>
     <property name="report.dir"  value="${build.dir}/junitreport"/>
 
     <path id="classpath">
