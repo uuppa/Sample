@@ -11,9 +11,9 @@ public class CalculatorTest {
   @Test
   public void evaluatesExpression() {
     BasicConfigurator.configure();
+    logger.info("****Executing CalculatorTest****"); 
     Calculator calculator = new Calculator();
     int sum = calculator.evaluate("1+2+3");
     assertEquals(6, sum);
-    logger.info("****Executing CalculatorTest****"); 
   }
 }
