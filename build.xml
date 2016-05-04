@@ -46,6 +46,7 @@
     </target>
     
      <target name="junit" depends="jar">
+     	<mkdir dir="${report.dir}"/>
  	<junit printsummary="yes">
             <classpath>
                 <path refid="classpath"/>
