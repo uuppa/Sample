@@ -59,7 +59,7 @@
             </batchtest>
         </junit>
     </target>
-    <target name="junitreport" depends="junit">
+    <target name="junitreport">
         <junitreport todir="${report.dir}">
             <fileset dir="${report.dir}" includes="TEST-*.xml"/>
             <report todir="${report.dir}"/>
@@ -67,6 +67,6 @@
     </target>
     <target name="clean-build" depends="clean,jar"/>
 
-    <target name="main" depends="clean,run,junitreport"/>
+    <target name="main" depends="clean,run"/>
 
 </project>
