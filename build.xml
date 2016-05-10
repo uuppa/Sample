@@ -47,7 +47,7 @@
     
      <target name="junit" depends="jar">
      	<mkdir dir="${report.dir}"/>
- 	<junit printsummary="yes" haltonfailure="no">
+ 	<junit printsummary="yes" haltonfailure="no" failureproperty="test.failed">
             <classpath>
                 <path refid="classpath"/>
                 <path refid="application"/>
@@ -57,6 +57,7 @@
                 <fileset dir="${src.dir}" includes="**/*Test.java"/>
             </batchtest>
         </junit>
+        <fail message="Test failure detected, check test results." if="test.failed" />
     </target>
     
     <target name="junitreport">
